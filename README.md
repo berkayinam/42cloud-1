@@ -3,9 +3,13 @@
 
 
 project/
+
 ├── ansible/
+
 │   ├── ansible.cfg
+
 │   ├── inventory.ini
+
 │   ├── playbook.yml
 │   ├── roles/
 │   │   ├── common/
