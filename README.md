@@ -3,21 +3,39 @@
 
 
 project/
+
 ├── ansible/
+
 │   ├── ansible.cfg
+
 │   ├── inventory.ini
+
 │   ├── playbook.yml
+
 │   ├── roles/
+
 │   │   ├── common/
+
 │   │   │   ├── tasks/
+
 │   │   │   │   └── main.yml
+
 │   │   │   └── templates/
+
 │   │   │       └── docker-compose.yml.j2
+
 │   │   └── webserver/
+
 │   │       ├── tasks/
+
 │   │       │   └── main.yml
+
 │   │       ├── templates/
+
 │   │       │   └── nginx.conf.j2
+
 │   └── group_vars/
+
 │       └── all.yml
+
 └── docker-compose.yml
