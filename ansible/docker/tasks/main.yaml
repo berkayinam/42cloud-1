@@ -18,6 +18,7 @@
       - containerd.io
     state: present
     update_cache: true
+    allow_downgrade: yes
 
 - name: Setup docker user
   ansible.builtin.user:

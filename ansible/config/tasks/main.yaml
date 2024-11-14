@@ -29,4 +29,6 @@
       - wget
       - unzip
     state: present
-    update_cache: true
+    update_cache: yes
+  changed_when: false
+

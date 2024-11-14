@@ -1,10 +1,21 @@
 ---
-- name: Setup Docker on Ubuntu Server 22.04
+- name: Update SSH authorized keys
   hosts: all
   become: true
-  remote_user: root
+  tasks:
+    - name: Ensure the user has correct SSH keys
+      ansible.builtin.authorized_key:
+        user: "berkay"  # Değiştirmek istediğin kullanıcı adı
+        state: present
+        key: "{{ lookup('file', '/home/binam/.ssh/id_rsa.pub') }}"  # Yeni SSH public key dosyasının yolunu buraya ekle
+
+- name: Setup Wordpress Server On SehmusServer with Ansible For Cloud Project
+  hosts: all
+  become: true
+  become_user: root
+  remote_user: berkay
   roles:
     - config
-    # - docker
+    - docker
     - copy
     - run
